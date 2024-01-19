@@ -59,6 +59,11 @@ button:hover {
 
 }
 
+.jumbotron {
+    font-family: 'Poppins', sans-serif;
+    padding: 50px;
+    color: #fff;
+}
 
 
 
