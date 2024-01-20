@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
   </head>
+  <!-- Bagian Logo -->
   <body>
     <div class="main-header">
       <img
@@ -22,7 +23,7 @@
         alt="logo1"
       />
     </div>
-
+    <!-- Bagian Navbar -->
     <header>
       <nav>
         <ul class="nav-links">
@@ -36,6 +37,46 @@
         </ul>
       </nav>
     </header>
-    <script src="" async defer></script>
+    <!-- Bagian Slideshow -->
+    <div class="slideshow-container">
+      <!-- Full width Image with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="./assets/img/36061144 - 【壁纸】★主线三十五章「然后，向着明天」壁纸分享 ★ 9.png"
+          style="width: 100%"
+        />
+        <div class="text">Caption Text</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img
+          src="./assets/img/36061144 - 【壁纸】★主线三十五章「然后，向着明天」壁纸分享 ★ 9.png"
+          style="width: 100%"
+        />
+        <div class="text">Caption Text</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img
+          src="./assets/img/36061144 - 【壁纸】★主线三十五章「然后，向着明天」壁纸分享 ★ 9.png"
+          style="width: 100%"
+        />
+        <div class="text">Caption Text</div>
+      </div>
+      <!-- Tombol next dan Previous -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- Dots / Circle -->
+    <div>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="script.js" async defer></script>
   </body>
 </html>
