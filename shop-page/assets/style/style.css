@@ -82,7 +82,6 @@ header {
 	padding: 15px;
 	display: flex;
 	flex-wrap: wrap;
-	border: 2px solid #717171;
 	justify-content: center;
 	align-items: center;
 }
@@ -143,6 +142,30 @@ header {
 .fade {
 	animation-name: fade;
 	animation-duration: 1.5s;
+}
+
+.dot,
+.arrow,
+.auto-play {
+	height: 15px;
+	width: 15px;
+	margin: 0 5px;
+	cursor: pointer;
+	display: inline-block;
+	background-color: #bbb;
+	border-radius: 50%;
+}
+
+.arrow {
+	font-size: 20px;
+	line-height: 15px;
+	padding: 2px;
+}
+
+.auto-play {
+	font-size: 12px;
+	line-height: 15px;
+	padding: 2px;
 }
 
 @keyframes fade {

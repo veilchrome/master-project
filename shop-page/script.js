@@ -1,5 +1,5 @@
-var slideIndex = 1;
-var autoChangeInterval;
+let slideIndex = 1;
+let autoChangeInterval;
 
 showSlides(slideIndex);
 toggleAuto(); // Start autoplay by default
@@ -7,17 +7,23 @@ toggleAuto(); // Start autoplay by default
 function plusSlides(n) {
 	clearInterval(autoChangeInterval);
 	showSlides((slideIndex += n));
+	if (autoChangeInterval) {
+		toggleAuto(); // Restart autoplay after manual slide change
+	}
 }
 
 function currentSlide(n) {
 	clearInterval(autoChangeInterval);
 	showSlides((slideIndex = n));
+	if (autoChangeInterval) {
+		toggleAuto(); // Restart autoplay after manual slide change
+	}
 }
 
 function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("mySlides");
-	var dots = document.getElementsByClassName("dot");
+	let i;
+	let slides = document.getElementsByClassName("mySlides");
+	let dots = document.getElementsByClassName("dot");
 
 	if (n > slides.length) {
 		slideIndex = 1;
@@ -40,9 +46,10 @@ function showSlides(n) {
 }
 
 function toggleAuto() {
-	var autoPlayButton = document.querySelector(".auto-play");
+	let autoPlayButton = document.querySelector(".auto-play");
 	if (autoChangeInterval) {
 		clearInterval(autoChangeInterval);
+		autoChangeInterval = null;
 		autoPlayButton.textContent = "Play";
 	} else {
 		autoChangeInterval = setInterval(function () {
